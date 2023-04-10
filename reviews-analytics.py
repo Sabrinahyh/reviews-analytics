@@ -37,11 +37,21 @@ print(new[0])
 #print new 裡面第一筆留言
 print(new[1])
 
-good = []
-for d in data:
-	if 'good' in d: 
-		#if後面是TRUE False
-		good.append(d)
-print('一共有', len(good), '筆留言提到Good')
-#len 長度
-print(good[0])
+# good = []
+# for d in data:
+# 	if 'good' in d: 
+# 		#if後面是TRUE False
+# 		good.append(d)
+# print('一共有', len(good), '筆留言提到Good')
+
+#list comprehension
+good = [1 for d in data if 'good' in d]
+# 這是一個 good 清單，第一個d: append d或是其他東西 to good list
+print(good)
+
+bad = [ 'bad' in d for d in data]
+# 這是 if bad in d （後面會是true or false) ，所以在bad清單裡面會有一百萬筆true and false.
+# bad = []
+# for d in data:
+# 	bad.append('bad' in d)
+print(bad)
