@@ -36,3 +36,12 @@ print('一共有',len(new),'長度<100')
 print(new[0]) 
 #print new 裡面第一筆留言
 print(new[1])
+
+good = []
+for d in data:
+	if 'good' in d: 
+		#if後面是TRUE False
+		good.append(d)
+print('一共有', len(good), '筆留言提到Good')
+#len 長度
+print(good[0])
